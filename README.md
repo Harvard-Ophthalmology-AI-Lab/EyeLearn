@@ -16,7 +16,7 @@ Here are sample codes to visualize the RNFLT map:
 ````
 from utils.map_handler import *
 
-rnflts = np.load('dataset/rnflt_map500.npy')
+rnflts = np.load('dataset/rnflt_map.npy')
 plot_2dmap(rnflts[0], show_cup=True)
 ````
 <img src="imgs/Fig2.png" width="250">
