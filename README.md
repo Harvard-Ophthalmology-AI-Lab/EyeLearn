@@ -52,4 +52,4 @@ preds = model_inpaint.predict([masked_maps, masks])
 <img src="imgs/example.png" width="800">
 
 ## Citation
-Shi, M., Lokhande, A., Fazli, M.S., Sharma, V., Tian, Y., Luo, Y., Pasquale, L.R., Elze, T., Boland, M.V., Zebardast, N. and Friedman, D.S., 2023. Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images in Glaucoma. IEEE Journal of Biomedical and Health Informatics.
+Shi M, Lokhande A, Fazli MS, Sharma V, Tian Y, Luo Y, Pasquale LR, Elze T, Boland MV, Zebardast N, Friedman DS. Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images in Glaucoma. IEEE Journal of Biomedical and Health Informatics. 2023 Jun 22.
