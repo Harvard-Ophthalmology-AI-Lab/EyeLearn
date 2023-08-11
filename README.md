@@ -22,7 +22,7 @@ plot_2dmap(rnflts[0], show_cup=True)
 <img src="imgs/Fig2.png" width="250">
 
 ## Pretrained Model
-The model weight EyeLearn_weights.72-0.0019.h5 trained using 10,000 samples from our larger private dataset can be downloaded via this [link](https://ophai.hms.harvard.edu/datasets/harvard-glaucoma-detection-500-samples/)
+The model weight "EyeLearn_weights.72-0.0019.h5" trained using 10,000 samples from our larger private dataset can be downloaded via this [link](https://ophai.hms.harvard.edu/datasets/harvard-glaucoma-detection-500-samples/)
 
 
 ## Use the Model
