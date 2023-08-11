@@ -1,5 +1,6 @@
 # EyeLearn
-Paper: Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images
+
+The dataset and code for the paper entitled *Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images* published in the IEEE Journal of Biomedical and Health Informatics. Here is the [link](https://ieeexplore.ieee.org/document/10159482) for the paper.
 
 <img src="imgs/Fig1.png" width="700">
 
@@ -9,9 +10,9 @@ tensorflow 2.4.0 <br/>
 opencv-python 4.5.5
 
 ## Dataset
-The dataset includes 500 OCT RNFLT maps (dimension 225x225) from 500 unique glaucoma patients. The glaucoma label and visual field mean deviation (md) information are also included in the data. The dataset can be downloaded from Harvard Dataverse at https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ENTBEE.
+The dataset includes 500 OCT retinal nerve fiber layer thickness (RNFLT) maps (dimension 225 x 225) from 500 unique glaucoma patients. The glaucoma label and visual field mean deviation (MD) information are also included in the data. The dataset can be accessed via this [link](https://ophai.hms.harvard.edu/datasets/harvard-glaucoma-detection-progression-1000-samples/). This dataset can only be used for non-commercial research purposes. At no time, the dataset shall be used for clinical decisions or patient care. The data use license is [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-Here are sample codes to visualize the rnflt map:
+Here are sample codes to visualize the RNFLT map:
 ````
 from utils.map_handler import *
 
