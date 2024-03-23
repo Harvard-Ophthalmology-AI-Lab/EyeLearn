@@ -25,9 +25,7 @@ plot_2dmap(img, show_cup=True)
 
 Calculate the masked RNFLT and corresponding mask image:
 ````
-from utils.map_handler import *
-
-masked_map, ori_mask, resized_map = process(img)
+masked_map, ori_mask, resized_map = process(img, cutoff=50) #RNTLT values less than the cutoff are treated as artifacts
 plt.imshow(masked_map)
 plt.show()
 plt.imshow(ori_mask)
