@@ -15,11 +15,25 @@ The dataset includes 500 OCT retinal nerve fiber layer thickness (RNFLT) maps (d
 Here are sample codes to visualize the RNFLT map:
 ````
 from utils.map_handler import *
+import matplotlib.pyplot as plt
 
 rnflts = np.load('dataset/rnflt_map.npy')
-plot_2dmap(rnflts[0], show_cup=True)
+img = rnflts[0]
+plot_2dmap(img, show_cup=True)
 ````
 <img src="imgs/Fig2.png" width="250">
+
+Calculate the masked RNFLT and corresponding mask image:
+````
+from utils.map_handler import *
+
+masked_map, ori_mask, resized_map = process(img)
+plt.imshow(masked_map)
+plt.show()
+plt.imshow(ori_mask)
+````
+<img src="imgs/masked_map.png" width="250">
+<img src="imgs/ori_mask.png" width="250">
 
 ## Pretrained Model
 The model weight "EyeLearn_weights.72-0.0019.h5" trained using 10,000 samples from our larger private dataset can be downloaded via this [link](https://ophai.hms.harvard.edu/datasets/harvard-gd500/)
@@ -43,9 +57,9 @@ model_correction = Model(inputs=[eyelearn.model.inputs[0], eyelearn.model.inputs
                                  outputs=eyelearn.model.output[0])
                                  
 # embedding inference
-embeds = model_embed.predict([masked_maps, masks]) 
+embeds = model_embed.predict([masked_map, ori_mask])[0] 
 # artifact correction
-preds = model_correction.predict([masked_maps, masks]) 
+preds = model_correction.predict([masked_map, ori_mask])[0]
 ````
 
 #### Artifact correction examples: <br />
