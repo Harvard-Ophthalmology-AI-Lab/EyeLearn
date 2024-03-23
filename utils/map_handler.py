@@ -9,6 +9,25 @@ def gen_cmap(N=10000):
                                                                   (0.23, '#2ab6c6'), (0.38,'yellow'), 
                                                                   (0.6,'red'), (1,'white')], N=N)   
 
+
+def process(img, threshold=50):
+    img_size = 256
+    kernel = np.ones((4,4), np.uint8)
+
+    img_t_b = cv2.resize(img, (img_size, img_size))
+    img_t_b = cv2.morphologyEx(img_t_b, cv2.MORPH_CLOSE, kernel)
+    diskcup, mask = obtain_cup_and_mask(img_t_b)
+    mask[img_t_b<threshold] = 0
+    img_b = to_3dmap_v2(deepcopy(img_t_b))
+    red, green, blue= diskcup.T
+    white_areas = (red == 0) & (blue == 0) & (green == 0)
+    mask[[white_areas.T]]=(1,1,1)
+    masked_map = np.array([img_b])/255 
+    ori_mask = np.array([mask])
+    masked_map[ori_mask==0] = 1
+    
+    return masked_map, ori_mask, img_t_b
+
 def obtain_cup_and_mask(img, cm=None):
     if cm == None:
         cm = gen_cmap(256)
