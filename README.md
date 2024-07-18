@@ -71,11 +71,15 @@ preds = model_correction.predict([masked_map, ori_mask])[0]
 If you find this repository useful for your research, please consider citing our [paper](https://ieeexplore.ieee.org/abstract/document/10159482):
 
 ```bibtex
-@article{shi2023artifact,
-  title={Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images in Glaucoma},
-  author={Shi, Min and Lokhande, Anagha and Fazli, Mojtaba S and Sharma, Vishal and Tian, Yu and Luo, Yan and Pasquale, Louis R and Elze, Tobias and Boland, Michael V and Zebardast, Nazlee and others},
-  journal={IEEE Journal of Biomedical and Health Informatics},
+@article{10159482,
+  author={Shi, Min and Lokhande, Anagha and Fazli, Mojtaba S. and Sharma, Vishal and Tian, Yu and Luo, Yan and Pasquale, Louis R. and Elze, Tobias and Boland, Michael V. and Zebardast, Nazlee and Friedman, David S. and Shen, Lucy Q. and Wang, Mengyu},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images in Glaucoma}, 
   year={2023},
-  publisher={IEEE}
-}
+  volume={27},
+  number={9},
+  pages={4329-4340},
+  keywords={Representation learning;Task analysis;Feature extraction;Visualization;Optical distortion;Image segmentation;Retina;Artifact correction;glaucoma;ophthalmic image;representation learning;RNFLT map},
+  doi={10.1109/JBHI.2023.3288830}}
+```
 
