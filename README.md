@@ -65,7 +65,7 @@ preds = model_correction.predict([masked_map, ori_mask])[0]
 #### Artifact correction examples: <br />
 <img src="imgs/example.png" width="800">
 
-## Acknowledgement & Citation
+## Acknowledgement and Citation
 
 
 If you find this repository useful for your research, please consider citing our [paper](https://ieeexplore.ieee.org/abstract/document/10159482):
