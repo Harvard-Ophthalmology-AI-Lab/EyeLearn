@@ -1,6 +1,6 @@
 # EyeLearn
 
-The dataset and code for the paper entitled [**Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images**](https://ieeexplore.ieee.org/document/10159482) published in the IEEE Journal of Biomedical and Health Informatics.
+The code and dataset for the paper entitled [**Artifact-Tolerant Clustering-Guided Contrastive Embedding Learning for Ophthalmic Images**](https://ieeexplore.ieee.org/document/10159482) published in the IEEE Journal of Biomedical and Health Informatics.
 
 <img src="imgs/Fig1.png" width="700">
 
